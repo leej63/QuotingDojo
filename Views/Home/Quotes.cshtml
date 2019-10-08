@@ -1,0 +1,16 @@
+<div class="mt-5">
+    <h1 class="text-center">Here are the awesome quotes!</h1>
+    <div class="row">
+    <div class="col"></div>
+    <div class="col">
+        <div>
+            @foreach(var quote in ViewBag.Quotes)
+            {
+                <p>"@quote["quote"]"</p>
+                <p>@quote["name"] at @quote["created_at"].ToString("h:mmtt MMMM d, yyy")</p>
+            }
+        </div>
+    </div>
+    <div class="col"></div>
+    </div>
+</div>

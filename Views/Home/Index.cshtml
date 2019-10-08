@@ -1,0 +1,22 @@
+﻿@model Quotes
+<div class="row">
+    <div class="col"></div>
+    <div class="col-8">
+        <div class="mt-5">
+            <h1 class="text-center">Welcome to Quoting Dojo</h1>
+            <form asp-action="CreateQuote" asp-controller="Home" method="post">
+                <label asp-for="name"></label><br>
+                <span asp-validation-for="name"></span><br>
+                <input class="form-control" asp-for="name"><br>
+                <label asp-for="quote"></label><br>
+                <span asp-validation-for="quote"></span><br>
+                <textarea class="form-control" asp-for="quote" cols="30" rows="5"></textarea><br>
+                <button class="btn btn-success form-control" type="submit">Add my quote!</button>
+            </form>
+            <a href="/quotes">
+                <button class="btn btn-outline-success mt-3 form-control">Skip to quotes!</button>
+            </a>
+        </div>
+    </div>
+    <div class="col"></div>
+</div>
